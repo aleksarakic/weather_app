@@ -26,7 +26,8 @@ class Weather
 
 	def defining_variables
 		@station = @parsed['name'] 
-		#@lan, @lat = @parsed['coord']['lon'], @parsed['coord']['lat']
+		@lan = @parsed['coord']['lon'] 
+		@lat = @parsed['coord']['lat']
 		@pressure = @parsed['main']['pressure']
 		@humidity = @parsed['main']['humidity']
 		@wind_speed = @parsed['wind']['speed']
@@ -37,7 +38,9 @@ class Weather
 
 	def variables_to_array
 		array = []
-		array.push(@station, @temp_in_c, @weather_description, @pressure, @humidity, @wind_speed, @cloudiness)
+		array.push(@station, @lan, @lat, @temp_in_c, @weather_description, @pressure, @humidity, @wind_speed, @cloudiness)
 	end
+
+
 end
 

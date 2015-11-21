@@ -1,9 +1,10 @@
-<h2>Weather App</h2>
-<p>This is data colected in <%=session[:forecast][0]%></p>
-<p>Temperature: <%=session[:forecast][1]%> C</p>
-<p>Description: <%=session[:forecast][2]%></p>
-<p>Pressure: <%=session[:forecast][3]%></p>
-<p>Humidity: <%=session[:forecast][4]%>%</p>
-<p>Wind speed: <%=session[:forecast][5]%>m/s</p>
-<p>Cloudiness: <%=session[:forecast][6]%>%</p>
-
+	<ul>
+		<li>This is data colected in <%=session[:forecast][0]%>, coordinates: <%=session[:forecast][1]%>, <%= session[:forecast][2] %>.</li>
+		<li>Temperature: <%=session[:forecast][3]%> C</li>
+		<li>Description: <%=session[:forecast][4]%></li>
+		<li>Pressure: <%=session[:forecast][5]%></li>
+		<li>Humidity: <%=session[:forecast][6]%>%</li>
+		<li>Wind speed: <%=session[:forecast][7]%>m/s</li>
+		<li>Cloudiness: <%=session[:forecast][8]%>%</li>
+	</ul>
+	<p><a href="/new">New Forecast</a></p>

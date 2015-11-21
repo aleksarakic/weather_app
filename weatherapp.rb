@@ -4,9 +4,10 @@ require './weather.rb'
 
 class WeatherApp < Sinatra::Base
 	enable :sessions
+	register Sinatra::Flash
 
 	get '/' do
-		erb :new	
+		erb :index	
 	end
 
 	get '/new' do
@@ -14,8 +15,12 @@ class WeatherApp < Sinatra::Base
 	end
 
 	post '/new' do
-		city = params[:city]
-		state = params[:state]
+		if params[:city] && params[:state] == ""
+			redirect '/failure'
+		else
+			city = params[:city]
+			state = params[:state]
+		end
 		@forecast = Weather.new(city, state)
 		@forecast.ping_api
 		@forecast.parsing
@@ -29,4 +34,7 @@ class WeatherApp < Sinatra::Base
 		erb :show
 	end
 
+	get '/failure' do
+		erb :failure
+	end
 end
