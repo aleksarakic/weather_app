@@ -37,7 +37,7 @@ class Weather
 
 	def variables_to_array
 		array = []
-		array.push(@station, @weather_description)
+		array.push(@station, @temp_in_c, @weather_description, @pressure, @humidity, @wind_speed, @cloudiness)
 	end
 end
 
