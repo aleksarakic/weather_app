@@ -1,0 +1,51 @@
+body {
+	background-color: #1A1A1A;
+}
+
+p {
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: #00CCCC;
+}
+
+
+/*INDEX*/
+
+/*LAYOUT*/
+
+#main-heading {
+	font-family: Arial;
+	color: white;
+}
+
+#footer-heading {
+	color: white;
+	font-family: Arial;
+}
+
+/*NEW*/
+
+
+/*SHOW*/
+
+.dabing {
+	color: #9400D3;
+}
+
+ul {
+	list-style-type: none;
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+}
+
+li {
+	color: white;
+}
+
+#new a {
+	text-decoration: none;
+	color: yellow;
+}

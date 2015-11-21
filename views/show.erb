@@ -1,10 +1,10 @@
 	<ul>
-		<li>This is data colected in <%=session[:forecast][0]%>, coordinates: <%=session[:forecast][1]%>, <%= session[:forecast][2] %>.</li>
-		<li>Temperature: <%=session[:forecast][3]%> C</li>
-		<li>Description: <%=session[:forecast][4]%></li>
-		<li>Pressure: <%=session[:forecast][5]%></li>
-		<li>Humidity: <%=session[:forecast][6]%>%</li>
-		<li>Wind speed: <%=session[:forecast][7]%>m/s</li>
-		<li>Cloudiness: <%=session[:forecast][8]%>%</li>
+		<li>This data is colected in<span class="dabing"> <%=session[:forecast][0]%></span>, coordinates:<span class="dabing"> <%=session[:forecast][2]%>, <%= session[:forecast][1]%></span>.</li>
+		<li>Temperature:<span class="dabing"> <%=session[:forecast][3]%> C</span></li>
+		<li>Description:<span class="dabing"> <%=session[:forecast][4]%></span></li>
+		<li>Pressure:<span class="dabing"> <%=session[:forecast][5]%></span></li>
+		<li>Humidity:<span class="dabing"> <%=session[:forecast][6]%>%</span></li>
+		<li>Wind speed:<span class="dabing"> <%=session[:forecast][7]%>m/s</span></li>
+		<li>Cloudiness:<span class="dabing"> <%=session[:forecast][8]%>%</span></li>
 	</ul>
-	<p><a href="/new">New Forecast</a></p>
+	<p id="new"><a href="/new">New Forecast</a></p>
