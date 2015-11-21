@@ -30,7 +30,7 @@ class Weather
 		# @pressure = @parsed['main']['pressure']
 		# @humidity = @parsed['main']['humidity']
 		# @wind_speed = @parsed['wind']['speed']
-		# @weather_description = @parsed['weather'].first['description']
+		@weather_description = @parsed['weather'].first['description']
 		# @cloudiness = @parsed['clouds']['all'] 	
 	end
 
@@ -44,9 +44,3 @@ class Weather
 	# end
 end
 
-# malo_vreme = Weather.new('Belgrade','Serbia')
-# .ping_api
-# .parsing
-# .kelvin_to_celsius
-# .defining_variables
-# .printing_data

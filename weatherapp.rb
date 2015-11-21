@@ -3,7 +3,7 @@ require 'sinatra/flash'
 require './weather.rb'
 
 class WeatherApp < Sinatra::Base
-	# enable :sessions
+	enable :sessions
 
 	get '/' do
 		erb :new	
@@ -20,7 +20,8 @@ class WeatherApp < Sinatra::Base
 		@forecast.ping_api
 		@forecast.parsing
 		@forecast.kelvin_to_celsius
-		@forecast.defining_variables
+		session[:forecast] = @forecast.defining_variables
+		redirect '/show'
 	end
 
 	get '/show' do
