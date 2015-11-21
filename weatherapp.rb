@@ -20,7 +20,8 @@ class WeatherApp < Sinatra::Base
 		@forecast.ping_api
 		@forecast.parsing
 		@forecast.kelvin_to_celsius
-		session[:forecast] = @forecast.defining_variables
+		@forecast.defining_variables
+		session[:forecast] = @forecast.variables_to_array
 		redirect '/show'
 	end
 

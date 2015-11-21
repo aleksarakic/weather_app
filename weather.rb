@@ -26,21 +26,18 @@ class Weather
 
 	def defining_variables
 		@station = @parsed['name'] 
-		# @lan, @lat = @parsed['coord']['lon'], @parsed['coord']['lat']
-		# @pressure = @parsed['main']['pressure']
-		# @humidity = @parsed['main']['humidity']
-		# @wind_speed = @parsed['wind']['speed']
+		#@lan, @lat = @parsed['coord']['lon'], @parsed['coord']['lat']
+		@pressure = @parsed['main']['pressure']
+		@humidity = @parsed['main']['humidity']
+		@wind_speed = @parsed['wind']['speed']
 		@weather_description = @parsed['weather'].first['description']
-		# @cloudiness = @parsed['clouds']['all'] 	
+		@cloudiness = @parsed['clouds']['all']
+		 	
 	end
 
-	# def printing_data
-	# 	puts "This is data colected in #{@station} station. Coordinates: #{@lan}, #{@lat}"
-	# 	puts "Description: #{@weather_description}"
-	# 	puts "Temperature: #{@temp_in_c} C°"
-	# 	puts "Humidity: #{@humidity}%"
-	# 	puts "Wind speed: #{@wind_speed} m/s"
-	# 	puts "Cloudiness: #{@cloudiness}%"
-	# end
+	def variables_to_array
+		array = []
+		array.push(@station, @weather_description)
+	end
 end
 
